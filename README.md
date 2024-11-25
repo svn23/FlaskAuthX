@@ -4,7 +4,7 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)   
 ![GitHub forks](https://img.shields.io/github/forks/svn23/FlaskAuthX.svg?style=social&label=Fork)
 [![GitHub watchers](https://img.shields.io/github/watchers/svn23/FlaskAuthX.svg?style=social&label=Watch)](https://github.com/svn23/FlaskAuthX/watchers/)
-[![GitHub license](https://img.shields.io/github/license/svn23/FlaskAuthX.svg)](https://github.com/svn23/FlaskAuthX/blob/master/LICENSE)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 [![Python](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) 
