@@ -1,14 +1,18 @@
 
 # User Management System using Flask
-
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  
+--- 
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)   
 ![GitHub forks](https://img.shields.io/github/forks/svn23/FlaskAuthX.svg?style=social&label=Fork)
-[![GitHub watchers](https://img.shields.io/github/watchers/svn23/FlaskAuthX.svg?style=social&label=Watch)](https://github.com/svn23/FlaskAuthX/watchers/)  
-[![GitHub license](https://img.shields.io/github/license/your-username/your-repository.svg)](https://github.com/svn23/FlaskAuthX/blob/master/LICENSE)  
-[![Python](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/)  
-[![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)  
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)  
+[![GitHub watchers](https://img.shields.io/github/watchers/svn23/FlaskAuthX.svg?style=social&label=Watch)](https://github.com/svn23/FlaskAuthX/watchers/)
+[![GitHub license](https://img.shields.io/github/license/svn23/FlaskAuthX.svg)](https://github.com/svn23/FlaskAuthX/blob/master/LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) 
 [![JavaScript](https://img.shields.io/badge/JavaScript-333333?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://www.javascript.com/)
+![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
 This project is a **User Management System** built using **Flask** as the backend framework, **MySQL** as the database, and **HTML/CSS/JS** for the frontend. The application allows for the creation, updating, and deletion of users, as well as password management and role-based access control. It features a secure authentication system with bcrypt for password hashing.
 
