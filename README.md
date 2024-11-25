@@ -1,6 +1,6 @@
 
 # User Management System using Flask
---- 
+
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  
 ![GitHub forks](https://img.shields.io/github/forks/svn23/FlaskAuthX.svg?style=social&label=Fork)
 [![GitHub watchers](https://img.shields.io/github/watchers/svn23/FlaskAuthX.svg?style=social&label=Watch)](https://github.com/svn23/FlaskAuthX/watchers/)  
