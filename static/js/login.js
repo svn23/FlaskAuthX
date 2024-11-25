@@ -40,9 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = await response.json();
 
             if (response.ok) {
-                // Successful login - redirect
+                // Successful login - redirect and handle user data
                 showMessage('Login successful! Redirecting...', false);
-                window.location.href = data.redirect_url;  // Redirect to dashboard or main page
+
+                // Access user data from the response
+                const userData = data.user_data;  // The user data you get from the backend
+
+                // Now you can handle the user data (e.g., store it in localStorage, sessionStorage, etc.)
+                localStorage.setItem('userId', userData.id);
+                localStorage.setItem('userName', userData.name);
+                localStorage.setItem('userEmail', userData.email);
+                localStorage.setItem('userRole', userData.role);  // Store the role
+                localStorage.setItem('userPassword', userData.password);  // Store the password (as plain text)
+
+                // Redirect to the main page or dash
+                window.location.href = data.redirect_url;  // Redirect to dash or main page
             } else {
                 // Show error message if login fails
                 showMessage(data.error || 'Login failed', true);

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dash</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_dash.css') }}">
+</head>
+<body>
+    <div class="dash-container">
+        <header>
+            <h1>Admin Dashboard</h1>
+            <!-- Logout Button -->
+            <button class="logout-btn" onclick="logout()">Logout</button>
+            <!-- Create New User Button -->
+            <button class="create-user-btn" onclick="createNewUser()">Create New User</button>
+        </header>
+        <main>
+            <h2>User Details</h2>
+            <div id="user-list" class="user-list">
+                <!-- User info placeholders will be replaced dynamically -->
+                {% for user in users %}
+                <div class="user-card" id="user-card-{{ user.id }}">
+                    <img src="https://via.placeholder.com/80" alt="User Profile Picture">
+                    <h3><input type="text" class="editable" id="name-{{ user.id }}" value="{{ user.name or 'Name Placeholder' }}" /></h3>
+                    <p>Email: <input type="email" class="editable" id="email-{{ user.id }}" value="{{ user.email or 'email@example.com' }}" /></p>
+                    <p>Age: <input type="number" class="editable" id="age-{{ user.id }}" value="{{ user.age or 'N/A' }}" /></p>
+                    <p>Role: 
+                        <span class="roles" id="role-{{ user.id }}">{{ user.role or 'Role Placeholder' }}</span>
+                    </p>
+                    <div class="user-actions">
+                        <button class="action-btn" onclick="deleteUser('{{ user.id }}')">Delete</button>
+                        <!-- Redirect to reset password page when clicked -->
+                        <button class="action-btn" onclick="resetPassword('{{ user.id }}')">Reset Password</button>
+                        <select class="role-dropdown" id="role-select-{{ user.id }}" onchange="updateRole('{{ user.id }}', this.value)">
+                            <option value="Admin" {% if user.role == 'Admin' %}selected{% endif %}>Admin</option>
+                            <option value="Editor" {% if user.role == 'Editor' %}selected{% endif %}>Editor</option>
+                        </select>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- Save Changes Button -->
+            <button class="save-btn" onclick="saveChanges()">Save Changes</button>
+        </main>
+    </div>
+
+    <script defer src="{{ url_for('static', filename='js/admin_dash.js') }}"></script>
+    <script>
+        // Function to handle Logout
+        function logout() {
+            // Send POST request to logout
+            fetch("/logout", {
+                method: "POST",  // Use POST method for logout
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Let Flask handle the redirect to login page
+                    window.location.href = "/login";  // This redirect will happen in your backend logic
+                } else {
+                    alert("Logout failed");
+                }
+            })
+            .catch(error => {
+                alert("An error occurred while logging out");
+                console.error(error);
+            });
+        }
+
+        // Function to handle Create New User button click
+        function createNewUser() {
+            // Redirect to the "Create New User" page (updated URL)
+            window.location.href = "/signup-admin";  // This URL should match the route in Flask for creating a new user
+        }
+
+        // Function to handle Reset Password button click
+        function resetPassword(userId) {
+            // Redirect to the reset password page for the specific user
+            window.location.href = "/reset_page/" + userId;  // Adjust this URL as necessary
+        }
+    </script>
+</body>
+</html>

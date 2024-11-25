@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user_dash.css') }}">
+</head>
+<body>
+    <div class="dash-container">
+        <header>
+            <h1>User Dashboard</h1>
+            <!-- Logout Button -->
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </header>
+        <main>
+            <h2>Your Information</h2>
+            <div class="user-card" id="user-card">
+                <img id="user-avatar" src="https://via.placeholder.com/80" alt="User Profile Picture">
+                <h3><input type="text" class="editable" id="user-name" value="Your Name" readonly /></h3>
+                <p>Email: <span id="user-email">your.email@example.com</span></p>
+                <p>Age: <input type="number" class="editable" id="user-age" value="N/A" /></p>
+                <p>Role: <span id="user-role">Standard</span></p>
+            </div>
+            <div class="user-actions">
+                <!-- Reset Password Button -->
+                <button class="action-btn" onclick="navigateToResetPassword()">Reset Password</button>
+            </div>
+            <!-- Save Changes Button -->
+            <button class="save-btn" onclick="saveChanges()">Save Changes</button>
+        </main>
+    </div>
+    <script defer src="{{ url_for('static', filename='js/user_dash.js') }}"></script>
+    
+    <script>
+        function navigateToResetPassword() {
+            window.location.href = "/reset_page";
+        }
+    </script>
+</body>
+</html>
